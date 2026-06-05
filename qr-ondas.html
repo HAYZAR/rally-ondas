@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>QR – Vibraciones y Ondas</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{--p:#1a237e;--a:#ff6f00;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',sans-serif;background:#f0f4ff;}
+header{background:var(--p);color:#fff;padding:16px 24px;display:flex;align-items:center;gap:12px;}
+header h1{font-size:1.2rem;flex:1;}
+.url-bar{background:#fff;border-bottom:1px solid #ddd;padding:14px 24px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.url-bar label{font-size:.85rem;color:#555;white-space:nowrap;}
+.url-bar input{flex:1;min-width:260px;border:2px solid #c5cae9;border-radius:8px;padding:8px 12px;font-size:.9rem;outline:none;}
+.url-bar input:focus{border-color:var(--p);}
+.url-bar button{background:var(--a);color:#fff;border:none;border-radius:8px;padding:9px 18px;cursor:pointer;font-weight:700;}
+.hint{background:#e8eaf6;border-left:4px solid var(--p);margin:20px 24px 0;padding:12px 16px;border-radius:4px;font-size:.85rem;}
+.controls{text-align:center;padding:16px;}
+.print-btn{background:var(--p);color:#fff;border:none;border-radius:8px;padding:10px 24px;cursor:pointer;font-size:.95rem;font-weight:700;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;padding:16px 24px 48px;}
+.qr-card{background:#fff;border-radius:14px;box-shadow:0 2px 10px rgba(0,0,0,.09);padding:18px;text-align:center;}
+.qr-card h3{font-size:1rem;color:var(--p);margin-bottom:3px;}
+.qr-card .sub{font-size:.72rem;color:#888;margin-bottom:12px;}
+.qr-wrap{display:flex;justify-content:center;margin-bottom:8px;}
+.qr-card .url-text{font-size:.6rem;color:#bbb;word-break:break-all;}
+@media print{header,.url-bar,.hint,.controls{display:none;}.grid{padding:0;gap:12px;}.qr-card{box-shadow:none;border:1px solid #ddd;}}
+</style>
+</head>
+<body>
+<header><h1>🌊 Vibraciones y Ondas — Códigos QR</h1><a href="ondas.html" style="color:#fff;font-size:.85rem;">← Volver</a></header>
+<div class="url-bar">
+  <label>URL base del sitio:</label>
+  <input type="text" id="base-url" placeholder="https://usuario.github.io/repositorio"/>
+  <button onclick="gen()">Generar QR</button>
+</div>
+<div class="hint">💡 Ingresa la URL de tu sitio en GitHub Pages y presiona <strong>Generar QR</strong>. Usa <strong>Ctrl+P</strong> para imprimir.</div>
+<div class="controls"><br/><button class="print-btn" onclick="window.print()">🖨️ Imprimir QR</button></div>
+<div class="grid" id="grid"></div>
+<script>
+const STATIONS=[
+  {id:1,tema:'Vocabulario – Crucigrama'},
+  {id:2,tema:'Tipos de Ondas y Rapidez'},
+  {id:3,tema:'Interferencia y Ondas Estacionarias'},
+  {id:4,tema:'Efecto Doppler y Ondas Especiales'},
+  {id:5,tema:'Problemas Cuantitativos'},
+];
+function gen(){
+  let base=document.getElementById('base-url').value.trim().replace(/\/$/,'');
+  if(!base) base=location.href.replace(/qr-ondas\.html.*/,'').replace(/\/$/,'');
+  const grid=document.getElementById('grid');
+  grid.innerHTML='';
+  STATIONS.forEach(s=>{
+    const url=base+'/ondas.html#station/'+s.id;
+    const card=document.createElement('div');
+    card.className='qr-card';
+    card.innerHTML=`<h3>Estación ${s.id}</h3><div class="sub">${s.tema}</div><div class="qr-wrap" id="qr${s.id}"></div><div class="url-text">${url}</div>`;
+    grid.appendChild(card);
+    new QRCode(document.getElementById('qr'+s.id),{text:url,width:150,height:150,colorDark:'#1a237e',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.H});
+  });
+}
+window.addEventListener('load',()=>{
+  const base=location.href.replace(/qr-ondas\.html.*/,'').replace(/\/$/,'');
+  document.getElementById('base-url').value=base;
+  gen();
+});
+</script>
+</body>
+</html>
