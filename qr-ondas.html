@@ -51,7 +51,7 @@ function gen(){
   const grid=document.getElementById('grid');
   grid.innerHTML='';
   STATIONS.forEach(s=>{
-    const url=base+'/ondas.html#station/'+s.id+'/'+s.key;
+    const url=base+'/#station/'+s.id+'/'+s.key;
     const card=document.createElement('div');
     card.className='qr-card';
     card.innerHTML=`<h3>Estación ${s.id}</h3><div class="sub">${s.tema}</div><div class="qr-wrap" id="qr${s.id}"></div><div class="url-text">${url}</div>`;
