@@ -444,7 +444,17 @@ function startAct(){
   saveS();
   // Check for pending station from QR scan before registration
   const ph=sessionStorage.getItem('pendingHash');
-  if(ph){sessionStorage.removeItem('pendingHash');location.hash=ph;return;}
+  if(ph){
+    sessionStorage.removeItem('pendingHash');
+    const pm=ph.match(/^#station\/([1-5])\/([A-Z0-9]+)$/i);
+    if(pm){
+      const pn=parseInt(pm[1]),pk=pm[2].toUpperCase();
+      if(KEYS[pn]===pk){
+        if(!S.unlocked.includes(pn)){S.unlocked.push(pn);saveS();}
+        openStation(pn);return;
+      }
+    }
+  }
   if(S.unlocked.includes(1)){openStation(1);return;}
   // No QR scanned yet — show instruction page
   showPage('pg-wait');setHeader(null);
