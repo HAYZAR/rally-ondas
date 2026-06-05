@@ -39,11 +39,11 @@ header h1{font-size:1.2rem;flex:1;}
 <div class="grid" id="grid"></div>
 <script>
 const STATIONS=[
-  {id:1,tema:'Vocabulario – Crucigrama'},
-  {id:2,tema:'Tipos de Ondas y Rapidez'},
-  {id:3,tema:'Interferencia y Ondas Estacionarias'},
-  {id:4,tema:'Efecto Doppler y Ondas Especiales'},
-  {id:5,tema:'Problemas Cuantitativos'},
+  {id:1,tema:'Vocabulario – Crucigrama',      key:'OND1A'},
+  {id:2,tema:'Tipos de Ondas y Rapidez',      key:'FRQ2C'},
+  {id:3,tema:'Interferencia y Estacionarias', key:'AMP3L'},
+  {id:4,tema:'Efecto Doppler y Especiales',   key:'DPL4R'},
+  {id:5,tema:'Problemas Cuantitativos',       key:'PRD5O'},
 ];
 function gen(){
   let base=document.getElementById('base-url').value.trim().replace(/\/$/,'');
@@ -51,7 +51,7 @@ function gen(){
   const grid=document.getElementById('grid');
   grid.innerHTML='';
   STATIONS.forEach(s=>{
-    const url=base+'/ondas.html#station/'+s.id;
+    const url=base+'/ondas.html#station/'+s.id+'/'+s.key;
     const card=document.createElement('div');
     card.className='qr-card';
     card.innerHTML=`<h3>Estación ${s.id}</h3><div class="sub">${s.tema}</div><div class="qr-wrap" id="qr${s.id}"></div><div class="url-text">${url}</div>`;
