@@ -285,6 +285,15 @@ header{background:var(--p);color:#fff;padding:11px 16px;display:flex;align-items
   <button class="btn btna" onclick="goSubmit()">Revisar y enviar respuestas →</button>
 </div>
 
+<!-- ESPERA (tras registro sin QR) -->
+<div class="page" id="pg-wait">
+  <div style="text-align:center;padding:60px 20px;">
+    <div style="font-size:3.5rem;margin-bottom:16px;">📱</div>
+    <h2 style="color:var(--p);font-size:1.4rem;margin-bottom:10px;">¡Registro exitoso!</h2>
+    <p style="color:var(--mu);line-height:1.6;">Ahora ve a la <strong>Estación 1</strong> y escanea el código QR para comenzar.</p>
+  </div>
+</div>
+
 <!-- ENVÍO -->
 <div class="page" id="pg-sub">
   <div class="card" style="margin-top:18px;">
@@ -433,12 +442,12 @@ function startAct(){
   document.getElementById('rerr').style.display='none';
   S.n1=n1;S.n2=n2;S.n3=document.getElementById('rn3').value.trim();S.grade=gr;
   saveS();
-  // After registration, go to station 1 if already unlocked, else lock
-  if(S.unlocked.includes(1)) openStation(1);
-  else {
-    // Try to parse hash for station access
-    route();
-  }
+  // Check for pending station from QR scan before registration
+  const ph=sessionStorage.getItem('pendingHash');
+  if(ph){sessionStorage.removeItem('pendingHash');location.hash=ph;return;}
+  if(S.unlocked.includes(1)){openStation(1);return;}
+  // No QR scanned yet — show instruction page
+  showPage('pg-wait');setHeader(null);
 }
 
 // ── ROUTING ───────────────────────────────────────────
@@ -478,10 +487,10 @@ function route(){
 
   if(hash==='#submit'){goSubmit();return;}
 
-  // Default: show register or first unlocked station
+  // Default
   if(!S.n1){showPage('pg-reg');setHeader(null);}
   else if(S.unlocked.length>0){openStation(Math.max(...S.unlocked));}
-  else{showPage('pg-reg');setHeader(null);}
+  else{showPage('pg-wait');setHeader(null);}
 }
 
 function openStation(n){
