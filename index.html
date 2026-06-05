@@ -11,7 +11,6 @@ body{font-family:'Segoe UI',sans-serif;background:var(--bg);color:#212121;min-he
 header{background:var(--p);color:#fff;padding:11px 16px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.3);}
 .htitle{font-size:1rem;font-weight:700;flex:1;}.htitle span{color:var(--a);}
 .hbadge{background:var(--a);border-radius:20px;padding:3px 12px;font-size:.78rem;font-weight:700;white-space:nowrap;}
-.pbar{height:5px;background:#3949ab;}.pfill{height:100%;background:var(--a);transition:width .4s;}
 .page{display:none;max-width:700px;margin:0 auto;padding:18px 14px 60px;}
 .page.on{display:block;}
 .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 2px 14px rgba(0,0,0,.09);margin-bottom:16px;}
@@ -19,7 +18,6 @@ header{background:var(--p);color:#fff;padding:11px 16px;display:flex;align-items
 .stnum{background:var(--a);border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.95rem;flex-shrink:0;}
 .sttitle{font-size:.98rem;font-weight:700;}.stsub{font-size:.78rem;opacity:.85;margin-top:2px;}
 .tag{display:inline-block;background:#e8eaf6;color:var(--p);border-radius:20px;padding:2px 10px;font-size:.7rem;font-weight:700;margin-bottom:10px;}
-/* fields */
 .field{display:flex;flex-direction:column;gap:5px;margin-bottom:11px;}
 .field label{font-size:.72rem;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.04em;}
 .field input,.field select,.field textarea{border:2px solid #e0e0e0;border-radius:8px;padding:8px 11px;font-size:.93rem;font-family:inherit;outline:none;transition:border-color .2s;width:100%;}
@@ -27,18 +25,15 @@ header{background:var(--p);color:#fff;padding:11px 16px;display:flex;align-items
 .field textarea{resize:vertical;min-height:76px;}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 @media(max-width:440px){.row2{grid-template-columns:1fr;}}
-/* questions */
 .qb{margin-bottom:18px;}
 .qtext{font-size:.93rem;font-weight:600;margin-bottom:9px;line-height:1.5;}
 .qn{display:inline-flex;align-items:center;justify-content:center;background:var(--p);color:#fff;border-radius:50%;width:21px;height:21px;font-size:.72rem;font-weight:700;margin-right:6px;flex-shrink:0;vertical-align:middle;}
-/* MC */
 .opts{display:flex;flex-direction:column;gap:7px;}
 .opt{display:flex;align-items:flex-start;gap:9px;background:#f5f7fa;border:2px solid #e0e0e0;border-radius:9px;padding:9px 13px;cursor:pointer;transition:border-color .2s,background .2s;font-size:.88rem;}
 .opt:hover,.opt.sel{border-color:var(--p);background:#e8eaf6;}
 .opt input{accent-color:var(--p);margin-top:2px;flex-shrink:0;}
 .opt label{cursor:pointer;line-height:1.4;}
 .dbox{background:#e3f2fd;border-left:4px solid #1565c0;border-radius:6px;padding:9px 13px;font-size:.83rem;margin-bottom:9px;line-height:1.6;}
-/* blanks */
 .bi{border:none;border-bottom:2px solid var(--p);background:transparent;font-size:.93rem;font-family:inherit;color:var(--p);font-weight:700;outline:none;min-width:110px;text-align:center;padding:2px 5px;}
 /* crossword */
 .cwrap{overflow-x:auto;margin-bottom:14px;}
@@ -51,7 +46,6 @@ header{background:var(--p);color:#fff;padding:11px 16px;display:flex;align-items
 .clues{font-size:.8rem;line-height:1.9;}
 .clues h4{color:var(--p);font-size:.82rem;margin:8px 0 3px;}
 .clues li{margin-left:16px;}
-/* buttons */
 .btn{display:flex;align-items:center;justify-content:center;gap:7px;border:none;border-radius:10px;padding:13px 20px;font-size:.93rem;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .2s,transform .1s;width:100%;margin-top:8px;}
 .btn:active{transform:scale(.98);}
 .btnp{background:var(--p);color:#fff;}
@@ -61,19 +55,9 @@ header{background:var(--p);color:#fff;padding:11px 16px;display:flex;align-items
 /* lock */
 #pg-lock{display:none;flex-direction:column;align-items:center;justify-content:center;padding:70px 24px;text-align:center;max-width:700px;margin:0 auto;}
 #pg-lock.on{display:flex;}
-#pg-lock .lico{font-size:3.5rem;margin-bottom:14px;}
-#pg-lock h2{color:var(--p);font-size:1.4rem;margin-bottom:10px;}
-#pg-lock p{color:var(--mu);max-width:340px;line-height:1.5;}
-/* summary */
-.si{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #eee;font-size:.83rem;}
 /* success */
-#pg-success{text-align:center;padding:60px 20px;max-width:700px;margin:0 auto;display:none;}
+#pg-success{display:none;text-align:center;padding:60px 20px;max-width:700px;margin:0 auto;}
 #pg-success.on{display:block;}
-.sico{font-size:3.8rem;margin-bottom:14px;}
-.stxt h2{color:var(--g);font-size:1.5rem;margin-bottom:8px;}
-.stxt p{color:var(--mu);line-height:1.5;}
-.ibox{background:#e8f5e9;border-radius:12px;padding:13px 16px;color:var(--g);font-weight:600;font-size:.88rem;margin-top:16px;}
-/* errors */
 .err{display:none;background:#ffebee;color:var(--r);border-radius:8px;padding:9px 13px;font-size:.83rem;margin-top:9px;}
 .spin{display:inline-block;width:15px;height:15px;border:2px solid #fff;border-top-color:transparent;border-radius:50%;animation:sp .6s linear infinite;vertical-align:middle;}
 @keyframes sp{to{transform:rotate(360deg);}}
@@ -84,270 +68,256 @@ header{background:var(--p);color:#fff;padding:11px 16px;display:flex;align-items
   <div class="htitle">🌊 <span>Vibraciones y Ondas</span></div>
   <div class="hbadge" id="hbadge">–</div>
 </header>
-<div class="pbar"><div class="pfill" id="pfill" style="width:0%"></div></div>
 
 <!-- LOCK -->
 <div id="pg-lock">
-  <div class="lico">🔒</div>
-  <h2>Estación bloqueada</h2>
-  <p>Escanea el código QR de esta estación para acceder al contenido.</p>
-</div>
-
-<!-- REGISTRO -->
-<div class="page on" id="pg-reg">
-  <div class="card" style="margin-top:18px;">
-    <h2 style="font-size:1.15rem;color:var(--p);margin-bottom:12px;">👥 Datos del grupo</h2>
-    <p style="font-size:.83rem;color:var(--mu);margin-bottom:14px;">Registren los integrantes antes de comenzar la actividad.</p>
-    <div class="row2">
-      <div class="field"><label>Estudiante 1 *</label><input id="rn1" type="text" placeholder="Nombre completo"/></div>
-      <div class="field"><label>Estudiante 2 *</label><input id="rn2" type="text" placeholder="Nombre completo"/></div>
-      <div class="field"><label>Estudiante 3 (opcional)</label><input id="rn3" type="text" placeholder="Nombre completo"/></div>
-      <div class="field"><label>Grado *</label>
-        <select id="rgr">
-          <option value="">— Selecciona —</option>
-          <option>11°A</option><option>11°B</option><option>11°C</option>
-        </select>
-      </div>
-    </div>
-    <div class="err" id="rerr">Completa todos los campos obligatorios.</div>
-    <button class="btn btna" onclick="startAct()">Comenzar actividad →</button>
-  </div>
+  <div style="font-size:3.5rem;margin-bottom:14px;">🔒</div>
+  <h2 style="color:var(--p);font-size:1.4rem;margin-bottom:10px;">Estación bloqueada</h2>
+  <p style="color:var(--mu);">Escanea el código QR de esta estación para acceder al contenido.</p>
 </div>
 
 <!-- E1: CRUCIGRAMA -->
 <div class="page" id="pg-s1">
   <div class="sth"><div class="stnum">1</div><div><div class="sttitle">Vocabulario de Ondas</div><div class="stsub">🔤 Crucigrama interactivo</div></div></div>
   <div class="card">
-    <div class="tag">Crucigrama</div>
-    <p style="font-size:.8rem;color:var(--mu);margin-bottom:11px;">Completa el crucigrama. Toca cada casilla y escribe la letra.</p>
-    <div class="cwrap"><table class="ctbl" id="ctbl"></table></div>
-    <div class="clues">
-      <h4>Horizontales</h4><ol id="cw-h"></ol>
-      <h4>Verticales</h4><ol id="cw-v"></ol>
+    <div class="tag">Datos del grupo</div>
+    <div class="row2">
+      <div class="field"><label>Estudiante 1 *</label><input id="1-n1" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 2 *</label><input id="1-n2" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 3 (opcional)</label><input id="1-n3" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Grado *</label><select id="1-gr"><option value="">— Selecciona —</option><option>11°A</option><option>11°B</option><option>11°C</option></select></div>
     </div>
   </div>
-  <button class="btn btnp" onclick="next(2)">Siguiente estación →</button>
+  <div class="card">
+    <div class="tag">Crucigrama · 9 palabras</div>
+    <p style="font-size:.8rem;color:var(--mu);margin-bottom:11px;">Completa el crucigrama. Toca cada casilla y escribe la letra.</p>
+    <div class="cwrap"><table class="ctbl" id="ctbl"></table></div>
+    <div class="clues"><h4>Horizontales</h4><ol id="cw-h"></ol><h4>Verticales</h4><ol id="cw-v"></ol></div>
+  </div>
+  <div class="err" id="1-err">Completa los campos obligatorios.</div>
+  <button class="btn btna" onclick="submit(1)">📤 Enviar respuesta</button>
 </div>
 
-<!-- E2: OPCIÓN MÚLTIPLE ONDAS -->
+<!-- E2: TIPOS DE ONDAS -->
 <div class="page" id="pg-s2">
   <div class="sth"><div class="stnum">2</div><div><div class="sttitle">Tipos de Ondas y Rapidez</div><div class="stsub">✅ Opción múltiple tipo ICFES</div></div></div>
   <div class="card">
+    <div class="tag">Datos del grupo</div>
+    <div class="row2">
+      <div class="field"><label>Estudiante 1 *</label><input id="2-n1" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 2 *</label><input id="2-n2" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 3 (opcional)</label><input id="2-n3" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Grado *</label><select id="2-gr"><option value="">— Selecciona —</option><option>11°A</option><option>11°B</option><option>11°C</option></select></div>
+    </div>
+  </div>
+  <div class="card">
     <div class="tag">Opción múltiple · 4 preguntas</div>
-
     <div class="qb">
-      <p class="qtext"><span class="qn">1</span>Una cuerda tensa vibra <em>perpendicularmente</em> a la dirección en que viaja la onda. ¿Qué tipo de onda es?</p>
-      <div class="opts" id="g-s2q1">
-        <div class="opt"><input type="radio" name="s2q1" value="A" id="s2q1a"><label for="s2q1a">A) Onda longitudinal</label></div>
-        <div class="opt"><input type="radio" name="s2q1" value="B" id="s2q1b"><label for="s2q1b">B) Onda transversal</label></div>
-        <div class="opt"><input type="radio" name="s2q1" value="C" id="s2q1c"><label for="s2q1c">C) Onda estacionaria</label></div>
-        <div class="opt"><input type="radio" name="s2q1" value="D" id="s2q1d"><label for="s2q1d">D) Onda de choque</label></div>
+      <p class="qtext"><span class="qn">1</span>Una cuerda vibra <em>perpendicularmente</em> a la dirección de la onda. ¿Qué tipo de onda es?</p>
+      <div class="opts" id="g-2q1">
+        <div class="opt"><input type="radio" name="2q1" value="A" id="2q1a"><label for="2q1a">A) Onda longitudinal</label></div>
+        <div class="opt"><input type="radio" name="2q1" value="B" id="2q1b"><label for="2q1b">B) Onda transversal</label></div>
+        <div class="opt"><input type="radio" name="2q1" value="C" id="2q1c"><label for="2q1c">C) Onda estacionaria</label></div>
+        <div class="opt"><input type="radio" name="2q1" value="D" id="2q1d"><label for="2q1d">D) Onda de choque</label></div>
       </div>
     </div>
-
     <div class="qb">
-      <div class="dbox">📻 Una estación FM transmite a <strong>101,7 MHz</strong>. Rapidez de la onda: <strong>3×10⁸ m/s</strong>.</div>
+      <div class="dbox">📻 Emisora FM a <strong>101,7 MHz</strong>. Rapidez: <strong>3×10⁸ m/s</strong>.</div>
       <p class="qtext"><span class="qn">2</span>¿Cuál es la longitud de onda aproximada?</p>
-      <div class="opts" id="g-s2q2">
-        <div class="opt"><input type="radio" name="s2q2" value="A" id="s2q2a"><label for="s2q2a">A) 0,34 m</label></div>
-        <div class="opt"><input type="radio" name="s2q2" value="B" id="s2q2b"><label for="s2q2b">B) 2,95 m</label></div>
-        <div class="opt"><input type="radio" name="s2q2" value="C" id="s2q2c"><label for="s2q2c">C) 29,5 m</label></div>
-        <div class="opt"><input type="radio" name="s2q2" value="D" id="s2q2d"><label for="s2q2d">D) 295 m</label></div>
+      <div class="opts" id="g-2q2">
+        <div class="opt"><input type="radio" name="2q2" value="A" id="2q2a"><label for="2q2a">A) 0,34 m</label></div>
+        <div class="opt"><input type="radio" name="2q2" value="B" id="2q2b"><label for="2q2b">B) 2,95 m</label></div>
+        <div class="opt"><input type="radio" name="2q2" value="C" id="2q2c"><label for="2q2c">C) 29,5 m</label></div>
+        <div class="opt"><input type="radio" name="2q2" value="D" id="2q2d"><label for="2q2d">D) 295 m</label></div>
       </div>
     </div>
-
     <div class="qb">
-      <div class="dbox">🌊 La distancia entre dos valles sucesivos es <strong>4 m</strong>. Pasan <strong>3 crestas por segundo</strong> por un punto fijo.</div>
-      <p class="qtext"><span class="qn">3</span>¿Cuál es la rapidez de propagación de la onda?</p>
-      <div class="opts" id="g-s2q3">
-        <div class="opt"><input type="radio" name="s2q3" value="A" id="s2q3a"><label for="s2q3a">A) 0,75 m/s</label></div>
-        <div class="opt"><input type="radio" name="s2q3" value="B" id="s2q3b"><label for="s2q3b">B) 7 m/s</label></div>
-        <div class="opt"><input type="radio" name="s2q3" value="C" id="s2q3c"><label for="s2q3c">C) 12 m/s</label></div>
-        <div class="opt"><input type="radio" name="s2q3" value="D" id="s2q3d"><label for="s2q3d">D) 4,3 m/s</label></div>
+      <div class="dbox">🌊 Distancia entre valles sucesivos: <strong>4 m</strong>. Pasan <strong>3 crestas/s</strong> por un punto fijo.</div>
+      <p class="qtext"><span class="qn">3</span>¿Cuál es la rapidez de la onda?</p>
+      <div class="opts" id="g-2q3">
+        <div class="opt"><input type="radio" name="2q3" value="A" id="2q3a"><label for="2q3a">A) 0,75 m/s</label></div>
+        <div class="opt"><input type="radio" name="2q3" value="B" id="2q3b"><label for="2q3b">B) 7 m/s</label></div>
+        <div class="opt"><input type="radio" name="2q3" value="C" id="2q3c"><label for="2q3c">C) 12 m/s</label></div>
+        <div class="opt"><input type="radio" name="2q3" value="D" id="2q3d"><label for="2q3d">D) 4,3 m/s</label></div>
       </div>
     </div>
-
     <div class="qb">
       <p class="qtext"><span class="qn">4</span>El sonido es onda longitudinal porque sus partículas vibran:</p>
-      <div class="opts" id="g-s2q4">
-        <div class="opt"><input type="radio" name="s2q4" value="A" id="s2q4a"><label for="s2q4a">A) Perpendicular a la dirección de propagación</label></div>
-        <div class="opt"><input type="radio" name="s2q4" value="B" id="s2q4b"><label for="s2q4b">B) En círculos alrededor del eje de la onda</label></div>
-        <div class="opt"><input type="radio" name="s2q4" value="C" id="s2q4c"><label for="s2q4c">C) Paralelas a la dirección de propagación</label></div>
-        <div class="opt"><input type="radio" name="s2q4" value="D" id="s2q4d"><label for="s2q4d">D) Sin necesitar ningún medio material</label></div>
+      <div class="opts" id="g-2q4">
+        <div class="opt"><input type="radio" name="2q4" value="A" id="2q4a"><label for="2q4a">A) Perpendicular a la propagación</label></div>
+        <div class="opt"><input type="radio" name="2q4" value="B" id="2q4b"><label for="2q4b">B) En círculos alrededor del eje</label></div>
+        <div class="opt"><input type="radio" name="2q4" value="C" id="2q4c"><label for="2q4c">C) Paralelas a la propagación</label></div>
+        <div class="opt"><input type="radio" name="2q4" value="D" id="2q4d"><label for="2q4d">D) Sin necesitar ningún medio</label></div>
       </div>
     </div>
   </div>
-  <button class="btn btnp" onclick="next(3)">Siguiente estación →</button>
+  <div class="err" id="2-err">Completa los campos obligatorios.</div>
+  <button class="btn btna" onclick="submit(2)">📤 Enviar respuesta</button>
 </div>
 
-<!-- E3: PREGUNTAS ABIERTAS + FRASES -->
+<!-- E3: INTERFERENCIA -->
 <div class="page" id="pg-s3">
   <div class="sth"><div class="stnum">3</div><div><div class="sttitle">Interferencia y Ondas Estacionarias</div><div class="stsub">✏️ Preguntas abiertas · Frases incompletas</div></div></div>
   <div class="card">
+    <div class="tag">Datos del grupo</div>
+    <div class="row2">
+      <div class="field"><label>Estudiante 1 *</label><input id="3-n1" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 2 *</label><input id="3-n2" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 3 (opcional)</label><input id="3-n3" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Grado *</label><select id="3-gr"><option value="">— Selecciona —</option><option>11°A</option><option>11°B</option><option>11°C</option></select></div>
+    </div>
+  </div>
+  <div class="card">
     <div class="tag">Preguntas abiertas</div>
     <div class="qb">
-      <p class="qtext"><span class="qn">1</span>Explica qué ocurre cuando dos ondas producen <strong>interferencia destructiva</strong>. ¿Qué le pasa a la amplitud resultante?</p>
-      <div class="field"><textarea id="s3o1" placeholder="Escribe tu respuesta..."></textarea></div>
+      <p class="qtext"><span class="qn">1</span>Explica qué ocurre en la <strong>interferencia destructiva</strong>. ¿Qué le pasa a la amplitud?</p>
+      <div class="field"><textarea id="3-o1" placeholder="Escribe tu respuesta..."></textarea></div>
     </div>
     <div class="qb">
-      <p class="qtext"><span class="qn">2</span>¿Qué son los <strong>nodos</strong> en una onda estacionaria? ¿Cómo se forman? Da un ejemplo de la vida cotidiana.</p>
-      <div class="field"><textarea id="s3o2" placeholder="Escribe tu respuesta..."></textarea></div>
+      <p class="qtext"><span class="qn">2</span>¿Qué son los <strong>nodos</strong> en una onda estacionaria? ¿Cómo se forman? Da un ejemplo cotidiano.</p>
+      <div class="field"><textarea id="3-o2" placeholder="Escribe tu respuesta..."></textarea></div>
     </div>
   </div>
   <div class="card">
     <div class="tag">Frases incompletas</div>
-    <p style="font-size:.8rem;color:var(--mu);margin-bottom:13px;">Escribe la palabra o frase correcta en cada espacio.</p>
-    <div class="qb"><p class="qtext"><span class="qn">3</span>Cuando la cresta de una onda coincide con la cresta de otra, se produce interferencia <input class="bi" id="s3b1" placeholder="________" size="13"/>.</p></div>
-    <div class="qb"><p class="qtext"><span class="qn">4</span>Los puntos de desplazamiento <em>máximo</em> en una onda estacionaria se llaman <input class="bi" id="s3b2" placeholder="________" size="10"/>.</p></div>
-    <div class="qb"><p class="qtext"><span class="qn">5</span>Una onda estacionaria se forma cuando dos ondas idénticas viajan en direcciones <input class="bi" id="s3b3" placeholder="________" size="10"/> y se superponen.</p></div>
+    <div class="qb"><p class="qtext"><span class="qn">3</span>Cuando cresta coincide con cresta se produce interferencia <input class="bi" id="3-b1" placeholder="________" size="13"/>.</p></div>
+    <div class="qb"><p class="qtext"><span class="qn">4</span>Los puntos de desplazamiento máximo en una onda estacionaria se llaman <input class="bi" id="3-b2" placeholder="________" size="10"/>.</p></div>
+    <div class="qb"><p class="qtext"><span class="qn">5</span>Una onda estacionaria se forma cuando dos ondas idénticas viajan en direcciones <input class="bi" id="3-b3" placeholder="________" size="10"/> y se superponen.</p></div>
   </div>
-  <button class="btn btnp" onclick="next(4)">Siguiente estación →</button>
+  <div class="err" id="3-err">Completa los campos obligatorios.</div>
+  <button class="btn btna" onclick="submit(3)">📤 Enviar respuesta</button>
 </div>
 
-<!-- E4: DOPPLER Y ONDAS ESPECIALES -->
+<!-- E4: DOPPLER -->
 <div class="page" id="pg-s4">
   <div class="sth"><div class="stnum">4</div><div><div class="sttitle">Efecto Doppler y Ondas Especiales</div><div class="stsub">✅ Opción múltiple tipo ICFES</div></div></div>
   <div class="card">
+    <div class="tag">Datos del grupo</div>
+    <div class="row2">
+      <div class="field"><label>Estudiante 1 *</label><input id="4-n1" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 2 *</label><input id="4-n2" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 3 (opcional)</label><input id="4-n3" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Grado *</label><select id="4-gr"><option value="">— Selecciona —</option><option>11°A</option><option>11°B</option><option>11°C</option></select></div>
+    </div>
+  </div>
+  <div class="card">
     <div class="tag">Opción múltiple · 4 preguntas</div>
-
     <div class="qb">
       <div class="dbox">🚑 Una ambulancia con sirena encendida se acerca a ti y luego se aleja.</div>
-      <p class="qtext"><span class="qn">1</span>Mientras <em>se acerca</em>, ¿qué percibes de la frecuencia de la sirena?</p>
-      <div class="opts" id="g-s4q1">
-        <div class="opt"><input type="radio" name="s4q1" value="A" id="s4q1a"><label for="s4q1a">A) Menor, porque las ondas se estiran</label></div>
-        <div class="opt"><input type="radio" name="s4q1" value="B" id="s4q1b"><label for="s4q1b">B) Mayor, porque las crestas llegan más frecuentemente</label></div>
-        <div class="opt"><input type="radio" name="s4q1" value="C" id="s4q1c"><label for="s4q1c">C) La misma, porque la rapidez del sonido no cambia</label></div>
-        <div class="opt"><input type="radio" name="s4q1" value="D" id="s4q1d"><label for="s4q1d">D) Un sonido más grave y débil</label></div>
+      <p class="qtext"><span class="qn">1</span>Mientras <em>se acerca</em>, ¿qué percibes de la frecuencia?</p>
+      <div class="opts" id="g-4q1">
+        <div class="opt"><input type="radio" name="4q1" value="A" id="4q1a"><label for="4q1a">A) Menor, las ondas se estiran</label></div>
+        <div class="opt"><input type="radio" name="4q1" value="B" id="4q1b"><label for="4q1b">B) Mayor, las crestas llegan más frecuentemente</label></div>
+        <div class="opt"><input type="radio" name="4q1" value="C" id="4q1c"><label for="4q1c">C) La misma, la rapidez del sonido no cambia</label></div>
+        <div class="opt"><input type="radio" name="4q1" value="D" id="4q1d"><label for="4q1d">D) Un sonido más grave y débil</label></div>
       </div>
     </div>
-
     <div class="qb">
       <p class="qtext"><span class="qn">2</span>El efecto Doppler ocurre cuando:</p>
-      <div class="opts" id="g-s4q2">
-        <div class="opt"><input type="radio" name="s4q2" value="A" id="s4q2a"><label for="s4q2a">A) Solo la fuente sonora se mueve</label></div>
-        <div class="opt"><input type="radio" name="s4q2" value="B" id="s4q2b"><label for="s4q2b">B) Solo el receptor está en movimiento</label></div>
-        <div class="opt"><input type="radio" name="s4q2" value="C" id="s4q2c"><label for="s4q2c">C) Hay movimiento relativo entre la fuente y el receptor</label></div>
-        <div class="opt"><input type="radio" name="s4q2" value="D" id="s4q2d"><label for="s4q2d">D) La onda supera la barrera del sonido</label></div>
+      <div class="opts" id="g-4q2">
+        <div class="opt"><input type="radio" name="4q2" value="A" id="4q2a"><label for="4q2a">A) Solo la fuente sonora se mueve</label></div>
+        <div class="opt"><input type="radio" name="4q2" value="B" id="4q2b"><label for="4q2b">B) Solo el receptor está en movimiento</label></div>
+        <div class="opt"><input type="radio" name="4q2" value="C" id="4q2c"><label for="4q2c">C) Hay movimiento relativo entre fuente y receptor</label></div>
+        <div class="opt"><input type="radio" name="4q2" value="D" id="4q2d"><label for="4q2d">D) La onda supera la barrera del sonido</label></div>
       </div>
     </div>
-
     <div class="qb">
-      <p class="qtext"><span class="qn">3</span>Un avión vuela a rapidez <em>mayor</em> que la del sonido. ¿Qué genera?</p>
-      <div class="opts" id="g-s4q3">
-        <div class="opt"><input type="radio" name="s4q3" value="A" id="s4q3a"><label for="s4q3a">A) Efecto Doppler</label></div>
-        <div class="opt"><input type="radio" name="s4q3" value="B" id="s4q3b"><label for="s4q3b">B) Onda estacionaria</label></div>
-        <div class="opt"><input type="radio" name="s4q3" value="C" id="s4q3c"><label for="s4q3c">C) Onda de choque (cono sónico)</label></div>
-        <div class="opt"><input type="radio" name="s4q3" value="D" id="s4q3d"><label for="s4q3d">D) Interferencia constructiva</label></div>
+      <p class="qtext"><span class="qn">3</span>Un avión vuela a rapidez mayor que el sonido. ¿Qué genera?</p>
+      <div class="opts" id="g-4q3">
+        <div class="opt"><input type="radio" name="4q3" value="A" id="4q3a"><label for="4q3a">A) Efecto Doppler</label></div>
+        <div class="opt"><input type="radio" name="4q3" value="B" id="4q3b"><label for="4q3b">B) Onda estacionaria</label></div>
+        <div class="opt"><input type="radio" name="4q3" value="C" id="4q3c"><label for="4q3c">C) Onda de choque (cono sónico)</label></div>
+        <div class="opt"><input type="radio" name="4q3" value="D" id="4q3d"><label for="4q3d">D) Interferencia constructiva</label></div>
       </div>
     </div>
-
     <div class="qb">
-      <div class="dbox">🔭 La luz de galaxias lejanas muestra un desplazamiento hacia el extremo rojo del espectro (corrimiento al rojo).</div>
+      <div class="dbox">🔭 La luz de galaxias lejanas muestra corrimiento al rojo.</div>
       <p class="qtext"><span class="qn">4</span>¿Qué indica sobre el movimiento de esas galaxias?</p>
-      <div class="opts" id="g-s4q4">
-        <div class="opt"><input type="radio" name="s4q4" value="A" id="s4q4a"><label for="s4q4a">A) Se acercan; su frecuencia percibida aumenta</label></div>
-        <div class="opt"><input type="radio" name="s4q4" value="B" id="s4q4b"><label for="s4q4b">B) Emiten únicamente luz roja</label></div>
-        <div class="opt"><input type="radio" name="s4q4" value="C" id="s4q4c"><label for="s4q4c">C) Se alejan; su frecuencia percibida disminuye</label></div>
-        <div class="opt"><input type="radio" name="s4q4" value="D" id="s4q4d"><label for="s4q4d">D) Giran rápidamente sobre su propio eje</label></div>
+      <div class="opts" id="g-4q4">
+        <div class="opt"><input type="radio" name="4q4" value="A" id="4q4a"><label for="4q4a">A) Se acercan; frecuencia percibida aumenta</label></div>
+        <div class="opt"><input type="radio" name="4q4" value="B" id="4q4b"><label for="4q4b">B) Emiten únicamente luz roja</label></div>
+        <div class="opt"><input type="radio" name="4q4" value="C" id="4q4c"><label for="4q4c">C) Se alejan; frecuencia percibida disminuye</label></div>
+        <div class="opt"><input type="radio" name="4q4" value="D" id="4q4d"><label for="4q4d">D) Giran rápidamente sobre su eje</label></div>
       </div>
     </div>
   </div>
-  <button class="btn btnp" onclick="next(5)">Siguiente estación →</button>
+  <div class="err" id="4-err">Completa los campos obligatorios.</div>
+  <button class="btn btna" onclick="submit(4)">📤 Enviar respuesta</button>
 </div>
 
 <!-- E5: PROBLEMAS -->
 <div class="page" id="pg-s5">
   <div class="sth"><div class="stnum">5</div><div><div class="sttitle">Problemas Cuantitativos</div><div class="stsub">🧮 v = λf · T = 1/f</div></div></div>
   <div class="card">
+    <div class="tag">Datos del grupo</div>
+    <div class="row2">
+      <div class="field"><label>Estudiante 1 *</label><input id="5-n1" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 2 *</label><input id="5-n2" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Estudiante 3 (opcional)</label><input id="5-n3" type="text" placeholder="Nombre completo"/></div>
+      <div class="field"><label>Grado *</label><select id="5-gr"><option value="">— Selecciona —</option><option>11°A</option><option>11°B</option><option>11°C</option></select></div>
+    </div>
+  </div>
+  <div class="card">
     <div class="tag">Problemas con datos</div>
     <div class="qb">
-      <div class="dbox">⏱ Un péndulo completa <strong>5 oscilaciones</strong> en <strong>10 segundos</strong>.</div>
+      <div class="dbox">⏱ Un péndulo completa <strong>5 oscilaciones</strong> en <strong>10 s</strong>.</div>
       <p class="qtext"><span class="qn">1a</span>¿Cuál es el periodo? (Muestra el procedimiento)</p>
-      <div class="field"><textarea id="s5p1a" placeholder="T = ..."></textarea></div>
+      <div class="field"><textarea id="5-p1a" placeholder="T = ..."></textarea></div>
       <p class="qtext" style="margin-top:9px;"><span class="qn">1b</span>¿Cuál es la frecuencia?</p>
-      <div class="field"><textarea id="s5p1b" placeholder="f = ..."></textarea></div>
+      <div class="field"><textarea id="5-p1b" placeholder="f = ..."></textarea></div>
     </div>
     <div class="qb">
-      <div class="dbox">🎵 Onda de sonido: frecuencia <strong>440 Hz</strong>, rapidez en el aire <strong>340 m/s</strong>.</div>
-      <p class="qtext"><span class="qn">2</span>¿Cuál es la longitud de onda? (Muestra el procedimiento)</p>
-      <div class="field"><textarea id="s5p2" placeholder="λ = ..."></textarea></div>
+      <div class="dbox">🎵 Sonido: frecuencia <strong>440 Hz</strong>, rapidez <strong>340 m/s</strong>.</div>
+      <p class="qtext"><span class="qn">2</span>¿Cuál es la longitud de onda?</p>
+      <div class="field"><textarea id="5-p2" placeholder="λ = ..."></textarea></div>
     </div>
     <div class="qb">
-      <div class="dbox">📡 Estación AM a <strong>960 kHz</strong>. Rapidez de las ondas de radio: <strong>3×10⁸ m/s</strong>.</div>
-      <p class="qtext"><span class="qn">3</span>¿Cuál es la longitud de onda de esas ondas?</p>
-      <div class="field"><textarea id="s5p3" placeholder="λ = ..."></textarea></div>
+      <div class="dbox">📡 Estación AM a <strong>960 kHz</strong>. Ondas de radio a <strong>3×10⁸ m/s</strong>.</div>
+      <p class="qtext"><span class="qn">3</span>¿Cuál es la longitud de onda?</p>
+      <div class="field"><textarea id="5-p3" placeholder="λ = ..."></textarea></div>
     </div>
     <div class="qb">
-      <p class="qtext"><span class="qn">4</span>Si la longitud de onda se <strong>duplica</strong> con rapidez constante, ¿qué ocurre con la frecuencia? Justifica con <em>v = λf</em>.</p>
-      <div class="field"><textarea id="s5p4" placeholder="Análisis y justificación..."></textarea></div>
+      <p class="qtext"><span class="qn">4</span>Si λ se duplica con rapidez constante, ¿qué ocurre con f? Justifica con <em>v = λf</em>.</p>
+      <div class="field"><textarea id="5-p4" placeholder="Análisis..."></textarea></div>
     </div>
   </div>
-  <button class="btn btna" onclick="goSubmit()">Revisar y enviar respuestas →</button>
-</div>
-
-<!-- ESPERA (tras registro sin QR) -->
-<div class="page" id="pg-wait">
-  <div style="text-align:center;padding:60px 20px;">
-    <div style="font-size:3.5rem;margin-bottom:16px;">📱</div>
-    <h2 style="color:var(--p);font-size:1.4rem;margin-bottom:10px;">¡Registro exitoso!</h2>
-    <p style="color:var(--mu);line-height:1.6;">Ahora ve a la <strong>Estación 1</strong> y escanea el código QR para comenzar.</p>
-  </div>
-</div>
-
-<!-- ENVÍO -->
-<div class="page" id="pg-sub">
-  <div class="card" style="margin-top:18px;">
-    <h2 style="font-size:1.1rem;color:var(--p);margin-bottom:11px;">📋 Resumen antes de enviar</h2>
-    <p style="font-size:.82rem;color:var(--mu);margin-bottom:13px;">Verifica que completaste todas las estaciones.</p>
-    <div id="sumlist"></div>
-    <div class="err" id="suberr">Error de conexión. Intenta de nuevo.</div>
-    <button class="btn btna" id="subbtn" onclick="submitAll()">📤 Enviar todas las respuestas</button>
-  </div>
+  <div class="err" id="5-err">Completa los campos obligatorios.</div>
+  <button class="btn btna" onclick="submit(5)">📤 Enviar respuesta</button>
 </div>
 
 <!-- ÉXITO -->
 <div id="pg-success">
-  <div class="sico">✅</div>
-  <div class="stxt"><h2>¡Respuestas enviadas!</h2><p>Las respuestas fueron registradas.<br/>Pueden cerrar esta página.</p></div>
-  <div class="ibox" id="sinfo"></div>
+  <div style="text-align:center;padding:60px 20px;">
+    <div style="font-size:3.8rem;margin-bottom:14px;">✅</div>
+    <h2 style="color:var(--g);font-size:1.5rem;margin-bottom:10px;">¡Respuesta enviada!</h2>
+    <p style="color:var(--mu);line-height:1.6;">Su respuesta fue registrada correctamente.<br/>Continúen con la siguiente estación.</p>
+    <div style="background:#e8f5e9;border-radius:12px;padding:13px 16px;color:var(--g);font-weight:600;font-size:.88rem;margin-top:16px;" id="sinfo"></div>
+  </div>
 </div>
 
 <script>
-// ── CONFIG ────────────────────────────────────────────
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxRrsh6FPvKeEiwAgGOwKpNNehQ6aj40sywBVr1gamlkp4pIzWfF9ZVEAvR6uEVCYlu/exec";
-
-// Claves secretas por estación — NO compartas estas URLs, solo los QR físicos
-const KEYS = { 1:'OND1A', 2:'FRQ2C', 3:'AMP3L', 4:'DPL4R', 5:'PRD5O' };
+const SCRIPT_URL="https://script.google.com/macros/s/AKfycbxRrsh6FPvKeEiwAgGOwKpNNehQ6aj40sywBVr1gamlkp4pIzWfF9ZVEAvR6uEVCYlu/exec";
 
 // ── CRUCIGRAMA ────────────────────────────────────────
-// Grid: 11 filas (0-10) × 10 columnas (0-9)
-// Horizontales: CRESTA, AMPLITUD, NODO, VALLE, HERTZ
-// Verticales:   PERIODO, RAPIDEZ, ANTINODO, DOPPLER
-// Intersecciones verificadas:
-//   PERIODO∩CRESTA=(2,5)R, PERIODO∩AMPLITUD=(3,5)I, PERIODO∩NODO=(4,5)O
-//   ANTINODO∩CRESTA=(2,9)A
-//   RAPIDEZ∩AMPLITUD=(3,1)A
-//   DOPPLER∩NODO=(4,6)D, DOPPLER∩VALLE=(8,6)L, DOPPLER∩HERTZ=(10,6)R
-const CW_WORDS = [
-  {id:1,d:'H',r:2, c:4, w:'CRESTA',   cl:'Punto más alto de una onda sinusoidal'},
-  {id:2,d:'H',r:3, c:1, w:'AMPLITUD', cl:'Desplazamiento máximo desde la posición de equilibrio'},
-  {id:3,d:'H',r:4, c:4, w:'NODO',     cl:'Punto de desplazamiento cero en una onda estacionaria'},
-  {id:4,d:'H',r:8, c:4, w:'VALLE',    cl:'Punto más bajo de una onda sinusoidal'},
-  {id:5,d:'H',r:10,c:4, w:'HERTZ',    cl:'Unidad SI de frecuencia (símbolo: Hz)'},
-  {id:6,d:'V',r:0, c:5, w:'PERIODO',  cl:'Tiempo para completar una vibración completa'},
-  {id:7,d:'V',r:2, c:1, w:'RAPIDEZ',  cl:'Velocidad de propagación de la onda (v = λ × f)'},
-  {id:8,d:'V',r:2, c:9, w:'ANTINODO', cl:'Punto de desplazamiento máximo en una onda estacionaria'},
-  {id:9,d:'V',r:4, c:6, w:'DOPPLER',  cl:'Efecto: cambio de frecuencia por movimiento relativo fuente-receptor'},
+const CW_WORDS=[
+  {id:1,d:'H',r:2, c:4,w:'CRESTA',  cl:'Punto más alto de una onda sinusoidal'},
+  {id:2,d:'H',r:3, c:1,w:'AMPLITUD',cl:'Desplazamiento máximo desde la posición de equilibrio'},
+  {id:3,d:'H',r:4, c:4,w:'NODO',    cl:'Punto de desplazamiento cero en onda estacionaria'},
+  {id:4,d:'H',r:8, c:4,w:'VALLE',   cl:'Punto más bajo de una onda sinusoidal'},
+  {id:5,d:'H',r:10,c:4,w:'HERTZ',   cl:'Unidad SI de frecuencia (símbolo: Hz)'},
+  {id:6,d:'V',r:0, c:5,w:'PERIODO', cl:'Tiempo para completar una vibración completa'},
+  {id:7,d:'V',r:2, c:1,w:'RAPIDEZ', cl:'Velocidad de propagación de la onda (v = λ × f)'},
+  {id:8,d:'V',r:2, c:9,w:'ANTINODO',cl:'Punto de desplazamiento máximo en onda estacionaria'},
+  {id:9,d:'V',r:4, c:6,w:'DOPPLER', cl:'Cambio de frecuencia por movimiento relativo fuente-receptor'},
 ];
-const CW_ROWS=11, CW_COLS=10;
+const CWR=11,CWC=10;
+const cwData={};
 
-function buildCWGrid(){
+function buildCW(){
   const g={};
   CW_WORDS.forEach(w=>{
     for(let i=0;i<w.w.length;i++){
-      const row=w.d==='H'?w.r:w.r+i;
-      const col=w.d==='H'?w.c+i:w.c;
-      const k=`${row},${col}`;
+      const r=w.d==='H'?w.r:w.r+i, c=w.d==='H'?w.c+i:w.c, k=`${r},${c}`;
       if(!g[k]) g[k]={letter:w.w[i],nums:[]};
       if(i===0) g[k].nums.push(w.id);
     }
@@ -356,38 +326,23 @@ function buildCWGrid(){
 }
 
 function renderCW(){
-  const grid=buildCWGrid();
+  const grid=buildCW();
   const tbl=document.getElementById('ctbl');
   tbl.innerHTML='';
-  if(!S.s1) S.s1={};
-  for(let r=0;r<CW_ROWS;r++){
+  for(let r=0;r<CWR;r++){
     const tr=document.createElement('tr');
-    for(let c=0;c<CW_COLS;c++){
-      const td=document.createElement('td');
-      const k=`${r},${c}`;
+    for(let c=0;c<CWC;c++){
+      const td=document.createElement('td'),k=`${r},${c}`;
       td.className='cc'+(grid[k]?' act':' blk');
       if(grid[k]){
-        if(grid[k].nums.length){
-          const n=document.createElement('span');
-          n.className='cnum';
-          n.textContent=grid[k].nums.join(' ');
-          td.appendChild(n);
-        }
+        if(grid[k].nums.length){const s=document.createElement('span');s.className='cnum';s.textContent=grid[k].nums.join(' ');td.appendChild(s);}
         const inp=document.createElement('input');
-        inp.maxLength=1;
-        inp.dataset.k=k;
-        inp.value=(S.s1[k]||'').toUpperCase();
+        inp.maxLength=1; inp.dataset.k=k;
+        inp.value=(cwData[k]||'').toUpperCase();
         inp.addEventListener('input',e=>{
-          const v=(e.target.value||'').toUpperCase().slice(0,1);
-          S.s1[k]=v; saveS();
-          // auto-advance to next active cell in reading order
-          const keys=Object.keys(grid);
-          const cur=keys.indexOf(k);
-          for(let i=cur+1;i<keys.length;i++){
-            const nk=keys[i];
-            const ni=document.querySelector(`input[data-k="${nk}"]`);
-            if(ni){ni.focus();break;}
-          }
+          cwData[k]=(e.target.value||'').toUpperCase().slice(0,1);
+          const keys=Object.keys(grid),ci=keys.indexOf(k);
+          for(let i=ci+1;i<keys.length;i++){const ni=document.querySelector(`input[data-k="${keys[i]}"]`);if(ni){ni.focus();break;}}
         });
         td.appendChild(inp);
       }
@@ -395,262 +350,79 @@ function renderCW(){
     }
     tbl.appendChild(tr);
   }
-  // clues
-  const ha=document.getElementById('cw-h'), va=document.getElementById('cw-v');
-  ha.innerHTML=''; va.innerHTML='';
-  CW_WORDS.forEach(w=>{
-    const li=document.createElement('li');
-    li.textContent=`${w.id}. ${w.cl}`;
-    (w.d==='H'?ha:va).appendChild(li);
-  });
+  const ha=document.getElementById('cw-h'),va=document.getElementById('cw-v');
+  ha.innerHTML='';va.innerHTML='';
+  CW_WORDS.forEach(w=>{const li=document.createElement('li');li.textContent=`${w.id}. ${w.cl}`;(w.d==='H'?ha:va).appendChild(li);});
 }
 
-// ── STATE ─────────────────────────────────────────────
-let S={n1:'',n2:'',n3:'',grade:'',unlocked:[]
-  ,s1:{},s2:{q1:'',q2:'',q3:'',q4:''},s3:{o1:'',o2:'',b1:'',b2:'',b3:''}
-  ,s4:{q1:'',q2:'',q3:'',q4:''},s5:{p1a:'',p1b:'',p2:'',p3:'',p4:''}};
-try{const r=sessionStorage.getItem('ondas');if(r){const p=JSON.parse(r);S=Object.assign(S,p);S.unlocked=p.unlocked||[];}}catch(e){}
-function saveS(){try{sessionStorage.setItem('ondas',JSON.stringify(S));}catch(e){}}
-
-// ── PAGES ─────────────────────────────────────────────
+// ── UI ────────────────────────────────────────────────
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
-  document.getElementById('pg-lock').classList.remove('on');
-  document.getElementById('pg-success').classList.remove('on');
-  if(id==='lock'){document.getElementById('pg-lock').classList.add('on');return;}
-  if(id==='success'){document.getElementById('pg-success').classList.add('on');return;}
-  const pg=document.getElementById(id);
-  if(pg) pg.classList.add('on');
+  document.getElementById('pg-lock').style.display='none';
+  document.getElementById('pg-success').style.display='none';
+  if(id==='lock'){document.getElementById('pg-lock').style.display='flex';return;}
+  if(id==='success'){document.getElementById('pg-success').style.display='block';window.scrollTo(0,0);return;}
+  const pg=document.getElementById(id);if(pg)pg.classList.add('on');
   window.scrollTo(0,0);
 }
 
 function setHeader(n){
-  const badge=document.getElementById('hbadge');
-  const fill=document.getElementById('pfill');
-  if(!n){badge.textContent='Registro';fill.style.width='0%';return;}
-  if(n==='✓'){badge.textContent='¡Listo!';fill.style.width='100%';return;}
-  badge.textContent=`Estación ${n}/5`;
-  fill.style.width=((n/5)*100)+'%';
+  document.getElementById('hbadge').textContent=n?`Estación ${n}/5`:'–';
 }
 
-// ── REGISTRATION ──────────────────────────────────────
-function startAct(){
-  const n1=document.getElementById('rn1').value.trim();
-  const n2=document.getElementById('rn2').value.trim();
-  const gr=document.getElementById('rgr').value;
-  if(!n1||!n2||!gr){document.getElementById('rerr').style.display='block';return;}
-  document.getElementById('rerr').style.display='none';
-  S.n1=n1;S.n2=n2;S.n3=document.getElementById('rn3').value.trim();S.grade=gr;
-  saveS();
-  // Check for pending station from QR scan before registration
-  const ph=sessionStorage.getItem('pendingHash');
-  if(ph){
-    sessionStorage.removeItem('pendingHash');
-    const pm=ph.match(/^#station\/([1-5])\/([A-Z0-9]+)$/i);
-    if(pm){
-      const pn=parseInt(pm[1]),pk=pm[2].toUpperCase();
-      if(KEYS[pn]===pk){
-        if(!S.unlocked.includes(pn)){S.unlocked.push(pn);saveS();}
-        openStation(pn);return;
-      }
-    }
-  }
-  if(S.unlocked.includes(1)){openStation(1);return;}
-  // No QR scanned yet — show instruction page
-  showPage('pg-wait');setHeader(null);
-}
-
-// ── ROUTING ───────────────────────────────────────────
-function route(){
-  const hash=location.hash; // e.g. #station/1/OND1A
-  const m=hash.match(/^#station\/([1-5])\/([A-Z0-9]+)$/i);
-
-  // Not registered yet?
-  if(!S.n1||!S.n2||!S.grade){
-    restoreReg();
-    showPage('pg-reg');setHeader(null);
-    // Save intended station/key to open after registration
-    if(m) sessionStorage.setItem('pendingHash',hash);
-    return;
-  }
-
-  if(m){
-    const n=parseInt(m[1]);
-    const key=m[2].toUpperCase();
-    if(KEYS[n]===key){
-      if(!S.unlocked.includes(n)){S.unlocked.push(n);saveS();}
-      openStation(n);
-    } else {
-      showPage('lock');setHeader(null);
-    }
-    return;
-  }
-
-  // Hash without key — check if already unlocked
-  const m2=hash.match(/^#station\/([1-5])$/);
-  if(m2){
-    const n=parseInt(m2[1]);
-    if(S.unlocked.includes(n)){openStation(n);}
-    else{showPage('lock');setHeader(null);}
-    return;
-  }
-
-  if(hash==='#submit'){goSubmit();return;}
-
-  // Default
-  if(!S.n1){showPage('pg-reg');setHeader(null);}
-  else if(S.unlocked.length>0){openStation(Math.max(...S.unlocked));}
-  else{showPage('pg-wait');setHeader(null);}
-}
-
-function openStation(n){
-  collect(currentStation);
-  currentStation=n;
-  showPage('pg-s'+n);
-  setHeader(n);
-  if(n===1){renderCW();}
-  restoreAnswers(n);
-}
-
-let currentStation=0;
-
-function next(n){
-  collect(currentStation);
-  // Check if station n is unlocked
-  if(!S.unlocked.includes(n)){
-    // Navigate to hash — will trigger route()
-    location.hash='#station/'+n;
-    return;
-  }
-  openStation(n);
-}
-
-function goSubmit(){
-  collect(currentStation);
-  buildSummary();
-  showPage('pg-sub');
-  setHeader(5);
-}
-
-// ── COLLECT ANSWERS ───────────────────────────────────
-function collect(n){
-  if(n===2){
-    ['q1','q2','q3','q4'].forEach(q=>{
-      const s=document.querySelector(`input[name="s2${q}"]:checked`);
-      S.s2[q]=s?s.value:'';
-    });
-  } else if(n===3){
-    S.s3.o1=document.getElementById('s3o1').value;
-    S.s3.o2=document.getElementById('s3o2').value;
-    S.s3.b1=document.getElementById('s3b1').value;
-    S.s3.b2=document.getElementById('s3b2').value;
-    S.s3.b3=document.getElementById('s3b3').value;
-  } else if(n===4){
-    ['q1','q2','q3','q4'].forEach(q=>{
-      const s=document.querySelector(`input[name="s4${q}"]:checked`);
-      S.s4[q]=s?s.value:'';
-    });
-  } else if(n===5){
-    S.s5.p1a=document.getElementById('s5p1a').value;
-    S.s5.p1b=document.getElementById('s5p1b').value;
-    S.s5.p2=document.getElementById('s5p2').value;
-    S.s5.p3=document.getElementById('s5p3').value;
-    S.s5.p4=document.getElementById('s5p4').value;
-  }
-  saveS();
-}
-
-// ── RESTORE ───────────────────────────────────────────
-function restoreReg(){
-  if(S.n1) document.getElementById('rn1').value=S.n1;
-  if(S.n2) document.getElementById('rn2').value=S.n2;
-  if(S.n3) document.getElementById('rn3').value=S.n3;
-  if(S.grade){const s=document.getElementById('rgr');for(let i=0;i<s.options.length;i++)if(s.options[i].value===S.grade){s.selectedIndex=i;break;}}
-}
-function restoreAnswers(n){
-  if(n===2){
-    ['q1','q2','q3','q4'].forEach(q=>{
-      if(S.s2[q]){const i=document.getElementById(`s2${q}${S.s2[q].toLowerCase()}`);if(i){i.checked=true;i.closest('.opt').classList.add('sel');}}
-    });
-  } else if(n===3){
-    const o1=document.getElementById('s3o1');if(o1)o1.value=S.s3.o1||'';
-    const o2=document.getElementById('s3o2');if(o2)o2.value=S.s3.o2||'';
-    const b1=document.getElementById('s3b1');if(b1)b1.value=S.s3.b1||'';
-    const b2=document.getElementById('s3b2');if(b2)b2.value=S.s3.b2||'';
-    const b3=document.getElementById('s3b3');if(b3)b3.value=S.s3.b3||'';
-  } else if(n===4){
-    ['q1','q2','q3','q4'].forEach(q=>{
-      if(S.s4[q]){const i=document.getElementById(`s4${q}${S.s4[q].toLowerCase()}`);if(i){i.checked=true;i.closest('.opt').classList.add('sel');}}
-    });
-  } else if(n===5){
-    const ids=['s5p1a','s5p1b','s5p2','s5p3','s5p4'];
-    const keys=['p1a','p1b','p2','p3','p4'];
-    ids.forEach((id,i)=>{const el=document.getElementById(id);if(el)el.value=S.s5[keys[i]]||'';});
-  }
-}
-
-// ── SUMMARY ───────────────────────────────────────────
-function buildSummary(){
-  const items=[
-    {l:'E1 – Crucigrama (vocabulario)',    done:Object.keys(S.s1||{}).length>0},
-    {l:'E2 – Tipos de ondas (opción múltiple)', done:Object.values(S.s2).some(v=>v)},
-    {l:'E3 – Interferencia (abiertas)',    done:(S.s3.o1||S.s3.b1||'').length>0},
-    {l:'E4 – Efecto Doppler (opción múltiple)', done:Object.values(S.s4).some(v=>v)},
-    {l:'E5 – Problemas cuantitativos',     done:(S.s5.p1a||S.s5.p2||'').length>0},
-  ];
-  document.getElementById('sumlist').innerHTML=items.map(i=>`
-    <div class="si"><span>${i.l}</span><span style="color:${i.done?'var(--g)':'#aaa'}">${i.done?'✅':'⬜'}</span></div>`).join('');
-}
-
-// ── SUBMIT ────────────────────────────────────────────
-function submitAll(){
-  collect(currentStation);
-  const btn=document.getElementById('subbtn');
-  const err=document.getElementById('suberr');
-  btn.disabled=true;
-  btn.innerHTML='<span class="spin"></span> Enviando...';
-  err.style.display='none';
-
-  const cw=Object.entries(S.s1||{}).map(([k,v])=>`${k}:${v}`).join(';');
-  const payload={
-    hora:new Date().toLocaleString('es-CO',{timeZone:'America/Bogota'}),
-    grado:S.grade, e1:S.n1, e2:S.n2, e3:S.n3,
-    crucigrama:cw,
-    s2q1:S.s2.q1,s2q2:S.s2.q2,s2q3:S.s2.q3,s2q4:S.s2.q4,
-    s3o1:S.s3.o1,s3o2:S.s3.o2,s3b1:S.s3.b1,s3b2:S.s3.b2,s3b3:S.s3.b3,
-    s4q1:S.s4.q1,s4q2:S.s4.q2,s4q3:S.s4.q3,s4q4:S.s4.q4,
-    s5p1a:S.s5.p1a,s5p1b:S.s5.p1b,s5p2:S.s5.p2,s5p3:S.s5.p3,s5p4:S.s5.p4,
-  };
-  fetch(SCRIPT_URL+'?'+new URLSearchParams(payload).toString(),{method:'GET',mode:'no-cors'})
-    .then(()=>{
-      sessionStorage.removeItem('ondas');
-      showPage('success');setHeader('✓');
-      document.getElementById('sinfo').textContent=`${S.grade} · ${S.n1} & ${S.n2}${S.n3?' & '+S.n3:''}`;
-    })
-    .catch(()=>{
-      btn.disabled=false;btn.innerHTML='📤 Enviar todas las respuestas';
-      err.style.display='block';
-    });
-}
-
-// ── MC UX ─────────────────────────────────────────────
+// ── MC CLICK ─────────────────────────────────────────
 document.querySelectorAll('.opt').forEach(o=>{
   o.addEventListener('click',()=>{
-    const inp=o.querySelector('input[type=radio]');
-    if(inp){inp.checked=true;}
-    const grp=o.closest('.opts');
-    if(grp) grp.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));
+    const inp=o.querySelector('input[type=radio]');if(inp)inp.checked=true;
+    const g=o.closest('.opts');if(g)g.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));
     o.classList.add('sel');
   });
 });
 
-// ── HASH CHANGE ───────────────────────────────────────
-window.addEventListener('hashchange',route);
+// ── ROUTE ─────────────────────────────────────────────
+function route(){
+  const m=location.hash.match(/^#station\/([1-5])$/);
+  if(!m){showPage('lock');return;}
+  const n=parseInt(m[1]);
+  showPage('pg-s'+n);setHeader(n);
+  if(n===1)renderCW();
+}
 
-// ── INIT ──────────────────────────────────────────────
-// Handle pending hash after registration
-const pendingHash=sessionStorage.getItem('pendingHash');
-if(pendingHash&&S.n1){sessionStorage.removeItem('pendingHash');location.hash=pendingHash;} else route();
+window.addEventListener('hashchange',route);
+route();
+
+// ── SUBMIT ────────────────────────────────────────────
+function v(id){return(document.getElementById(id)||{}).value||'';}
+function mc(name){const s=document.querySelector(`input[name="${name}"]:checked`);return s?s.value:'';}
+
+function submit(n){
+  const n1=v(`${n}-n1`).trim(),n2=v(`${n}-n2`).trim(),gr=v(`${n}-gr`);
+  const err=document.getElementById(`${n}-err`);
+  if(!n1||!n2||!gr){err.style.display='block';return;}
+  err.style.display='none';
+
+  const btn=document.querySelector(`#pg-s${n} .btn`);
+  btn.disabled=true;btn.innerHTML='<span class="spin"></span> Enviando...';
+
+  const hora=new Date().toLocaleString('es-CO',{timeZone:'America/Bogota'});
+  let payload={hora,estacion:n,grado:gr,estudiante1:n1,estudiante2:v(`${n}-n2`),estudiante3:v(`${n}-n3`)};
+
+  if(n===1) payload.crucigrama=Object.entries(cwData).map(([k,val])=>`${k}:${val}`).join(';');
+  if(n===2){payload.s2q1=mc('2q1');payload.s2q2=mc('2q2');payload.s2q3=mc('2q3');payload.s2q4=mc('2q4');}
+  if(n===3){payload.s3o1=v('3-o1');payload.s3o2=v('3-o2');payload.s3b1=v('3-b1');payload.s3b2=v('3-b2');payload.s3b3=v('3-b3');}
+  if(n===4){payload.s4q1=mc('4q1');payload.s4q2=mc('4q2');payload.s4q3=mc('4q3');payload.s4q4=mc('4q4');}
+  if(n===5){payload.s5p1a=v('5-p1a');payload.s5p1b=v('5-p1b');payload.s5p2=v('5-p2');payload.s5p3=v('5-p3');payload.s5p4=v('5-p4');}
+
+  fetch(SCRIPT_URL+'?'+new URLSearchParams(payload).toString(),{method:'GET',mode:'no-cors'})
+    .then(()=>{
+      showPage('success');
+      document.getElementById('sinfo').textContent=`Estación ${n} · ${gr} · ${n1} & ${n2}`;
+    })
+    .catch(()=>{
+      btn.disabled=false;btn.innerHTML='📤 Enviar respuesta';
+      err.textContent='Error de conexión. Intenta de nuevo.';err.style.display='block';
+    });
+}
 </script>
 </body>
 </html>
